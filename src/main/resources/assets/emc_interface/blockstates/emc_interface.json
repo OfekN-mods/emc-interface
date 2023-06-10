@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "emc_interface:block/emc_interface"
+    }
+  }
+}
