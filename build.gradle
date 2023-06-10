@@ -6,7 +6,7 @@ plugins {
 
 version = '1.0.1'
 group = 'com.ofek2608.emc_interface' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'emc-interface-1.19.2'
+archivesBaseName = 'emc-interface-1.18.2'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -26,7 +26,7 @@ minecraft {
     //
     // Use non-default mappings at your own risk. They may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
-    mappings channel: 'official', version: '1.19'
+    mappings channel: 'official', version: '1.18.2'
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
@@ -139,7 +139,7 @@ dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.19.2-43.2.0'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.2.0'
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
@@ -153,9 +153,9 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-    implementation fg.deobf("curse.maven:projecte-226410:3955047")
-    implementation fg.deobf("curse.maven:refined-storage-243076:4465872")
-    implementation fg.deobf("curse.maven:applied-energistics-2-223794:4548558")
+    implementation fg.deobf("curse.maven:projecte-226410:3722831")
+    implementation fg.deobf("curse.maven:refined-storage-243076:4392829")
+    implementation fg.deobf("curse.maven:applied-energistics-2-223794:4548564")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

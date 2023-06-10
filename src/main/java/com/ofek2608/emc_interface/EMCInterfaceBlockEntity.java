@@ -8,8 +8,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.items.CapabilityItemHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -49,7 +49,7 @@ public class EMCInterfaceBlockEntity extends BlockEntity {
 	
 	@Override
 	public <T> @NotNull LazyOptional<T> getCapability(Capability<T> cap, @Nullable Direction direction) {
-		if (cap == ForgeCapabilities.ITEM_HANDLER) {
+		if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
 			return itemHandler.cast();
 		}
 		return super.getCapability(cap, direction);
