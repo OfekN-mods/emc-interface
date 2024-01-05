@@ -46,7 +46,7 @@ public class EMCContent {
 				continue;
 			}
 			ItemStack stack = info.createStack();
-			stack.setCount(maxExtract);
+			stack.setCount(Math.min(maxExtract, EMCInterfaceConfig.MAX_ITEMS.get()));
 			
 			count++;
 			infos.add(info);

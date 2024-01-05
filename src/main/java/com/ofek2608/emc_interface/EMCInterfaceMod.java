@@ -3,14 +3,15 @@ package com.ofek2608.emc_interface;
 import com.mojang.logging.LogUtils;
 import moze_intel.projecte.gameObjs.registration.impl.ItemDeferredRegister;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -44,5 +45,7 @@ public class EMCInterfaceMod {
 		BLOCKS.register(modEventBus);
 		BLOCK_ENTITIES.register(modEventBus);
 		ITEMS.register(modEventBus);
+		
+		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EMCInterfaceConfig.SPEC);
 	}
 }
